@@ -1,0 +1,8 @@
+name: elysium-dev_env
+
+services:
+  pi:
+    build: .
+    volumes:
+        - '../argo:/path/inside/container'
+
