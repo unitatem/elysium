@@ -4,5 +4,5 @@ services:
   pi:
     build: .
     volumes:
-        - '../argo:/path/inside/container'
+        - '../argo:/home/developer/argo'
 
