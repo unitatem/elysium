@@ -1,0 +1,4 @@
+Directory ssh contains:
+- ssh config file
+- public and private key used to authenticate ssh connection with physical RPi
+

@@ -4,5 +4,5 @@ services:
   pi:
     build: .
     volumes:
-        - '../argo:/home/developer/argo'
+        - '../.:/home/developer/elysium'
 
