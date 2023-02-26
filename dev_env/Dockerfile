@@ -5,16 +5,16 @@ FROM ubuntu:20.04
 
 RUN apt-get update; \
     apt-get install -y \
-        vim tree \
+        vim tree git \
         net-tools iputils-ping openssh-client \
         g++-arm-linux-gnueabi
 
-# RUN useradd --create-home --shell /bin/bash developer
-# USER developer
-# WORKDIR /home/developer
+RUN useradd --create-home --shell /bin/bash developer
+USER developer
+WORKDIR /home/developer
 
-COPY ssh* /root/.ssh
-# RUN chmod 700 /root/.ssh
+COPY --chown=developer ssh* .ssh
+# RUN chmod 700 .ssh
 
 ENTRYPOINT sleep infinity
 
