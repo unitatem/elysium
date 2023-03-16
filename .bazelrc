@@ -1,0 +1,1 @@
+build:rpi0 --platforms=//bazel/toolchains/gcc9_cross:platform --incompatible_enable_cc_toolchain_resolution
