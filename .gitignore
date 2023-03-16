@@ -1,0 +1,6 @@
+# Bazel
+bazel-bin
+bazel-elysium
+bazel-out
+bazel-testlogs
+
