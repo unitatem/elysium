@@ -1,1 +1,8 @@
-build:rpi0 --platforms=//bazel/toolchains/gcc9_cross:platform --incompatible_enable_cc_toolchain_resolution
+# Default Bazel C++ toolchain to build the tools used during the build.
+build:rpi0 --host_crosstool_top=@bazel_tools//tools/cpp:toolchain
+
+# Custom-configured c++ toolchain.
+build:rpi0 --crosstool_top=//bazel/toolchains/gcc9_cross_v2:suite
+
+# Use --cpu as a differentiator.
+build:rpi0 --cpu=k8
