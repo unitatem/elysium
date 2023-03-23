@@ -1,46 +1,49 @@
 cc_library(
     name = "pigpio",
-    hdrs = [
-      "command.h",
-      "custom.cext",
-      "pigpio.h",
-    ],
     srcs = [
+        "command.c",
         "pigpio.c",
-    ]
+    ],
+    hdrs = [
+        "command.h",
+        "custom.cext",
+        "pigpio.h",
+    ],
+    include_prefix = "pigpio",
+    visibility = ["//visibility:public"],
 )
 
 cc_library(
     name = "pigpiod_if",
-    hdrs = [
-      "command.h",
-      "pigpio.h",
-      "pigpiod_if.h"
-    ],
     srcs = [
         "pigpiod_if.c",
-    ]
+    ],
+    hdrs = [
+        "command.h",
+        "pigpio.h",
+        "pigpiod_if.h",
+    ],
 )
 
 cc_library(
     name = "pigpiod_if2",
-    hdrs = [
-      "command.h",
-      "pigpio.h",
-      "pigpiod_if2.h"
-    ],
     srcs = [
         "pigpiod_if2.c",
-    ]
+    ],
+    hdrs = [
+        "command.h",
+        "pigpio.h",
+        "pigpiod_if2.h",
+    ],
 )
 
 cc_library(
     name = "command",
-    hdrs = [
-      "command.h",
-      "pigpio.h"
-    ],
     srcs = [
         "command.c",
-    ]
+    ],
+    hdrs = [
+        "command.h",
+        "pigpio.h",
+    ],
 )
